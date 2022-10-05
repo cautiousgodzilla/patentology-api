@@ -1,6 +1,6 @@
 # SEARCH
 
-from urllib import quote_plus
+from urllib.parse import quote_plus
 from constants import *
 
 class Query(object):    
@@ -230,4 +230,5 @@ class Query(object):
         
         mid = quote_plus(search_string, safe=safe)
         url = base + mid + end
+        print(url)
         return url
